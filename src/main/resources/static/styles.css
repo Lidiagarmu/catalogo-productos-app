@@ -1,21 +1,113 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
-.search-container {
+/* Estilo del título principal */
+h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5em;
+    color: #4CAF50; /* Color verde */
     margin-bottom: 20px;
 }
 
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+/* Estilo del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Eliminamos márgenes automáticos del body */
+    min-height: 100vh; /* Aseguramos que el fondo cubra al menos la altura de la ventana */
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%); /* Degradado de fondo */
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.product {
-    border: 1px solid #ccc;
+/* Aseguramos que el html también cubra toda la pantalla */
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Aseguramos que todos los elementos respeten el box-sizing */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Estilo para los filtros */
+.filter-container {
+    margin-bottom: 30px; /* Espacio debajo de los filtros */
+}
+
+.filter-container input, .filter-container select {
     padding: 10px;
+    margin-right: 10px; /* Espacio a la derecha de los inputs */
+    border: 1px solid #ccc;
     border-radius: 5px;
-    width: 200px;
+}
+
+.filter-container input:focus, .filter-container select:focus {
+    outline: none;
+    border-color: #4CAF50; /* Color de borde cuando está en foco */
+}
+
+/* Estilo para la lista de productos */
+#product-list {
+    margin-top: 20px; /* Añadimos margen encima de la lista de productos */
+}
+
+/* Contenedor de productos */
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en múltiples filas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+}
+
+/* Estilo de cada tarjeta de producto */
+.product {
+    border: 1px solid #ccc; /* Borde de las tarjetas */
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo blanco para las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    text-align: center;
+    width: 23%; /* Para crear cuatro tarjetas por fila */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: space-between; /* Espaciado uniforme entre los elementos */
+    height: 200px; /* Altura uniforme para todas las tarjetas */
+}
+/* Estilo de la imagen de cada tarjeta */
+.product img {
+    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    height: auto;    /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+/* Estilo del título de cada tarjeta */
+.product h2 {
+    color: #4CAF50; /* Color verde para el título */
+    font-size: 18px;
+    margin: 10px 0; /* Espacio arriba y abajo del título */
+}
+
+/* Estilo para los párrafos de las tarjetas */
+.product p {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    margin: 3px 0; /* Espacio reducido entre párrafos */
+    line-height: 1.2; /* Altura de línea reducida */
+}
+
+/* Estilo para el precio */
+.product p.price {
+    font-weight: bold; /* Negrita para el precio */
+}
+
+/* Espaciado de las tarjetas en la lista de productos */
+.product-container {
+    margin-bottom: 20px; /* Margen debajo del contenedor de productos */
+}
+
+/* Ajustes de la clase search-container */
+.search-container {
+    margin-bottom: 20px; /* Espacio debajo de los filtros */
 }

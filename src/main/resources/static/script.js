@@ -32,9 +32,10 @@ function displayProducts(products) {
         const productDiv = document.createElement('div');
         productDiv.classList.add('product');
         productDiv.innerHTML = `
+        <img src="${product.imageUrl}" alt="${product.name}" class="product-image" style="max-width: 100%; border-radius: 5px;">
             <h2>${product.name}</h2>
             <p>Categoría: ${product.category}</p>
-            <p>Precio: $${product.price.toFixed(2)}</p>
+            <p>Precio: ${product.price.toFixed(2)} €</p>
         `;
         productList.appendChild(productDiv);
     });

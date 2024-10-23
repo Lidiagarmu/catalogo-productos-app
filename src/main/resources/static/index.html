@@ -11,7 +11,15 @@
 
 <div class="filter-container">
     <input type="text" id="name-filter" placeholder="Filtrar por nombre...">
-    <input type="text" id="category-filter" placeholder="Filtrar por categoría...">
+
+    <select id="category-filter">
+        <option value="">Filtrar por categoría...</option>
+        <option value="Electronica">Electrónica</option>
+        <option value="Fitness">Fitness</option>
+        <option value="Hogar">Hogar</option>
+        <option value="Musica">Música</option>
+    </select>
+
     <input type="number" id="min-price-filter" placeholder="Precio mínimo">
     <input type="number" id="max-price-filter" placeholder="Precio máximo">
 </div>
