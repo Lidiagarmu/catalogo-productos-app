@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
-// Función para mostrar los productos en la página
+    // Función para mostrar los productos en la página
 function displayProducts(products) {
     const productList = document.getElementById('product-list');
     productList.innerHTML = ''; // Limpiar la lista de productos
@@ -32,7 +32,8 @@ function displayProducts(products) {
         const productDiv = document.createElement('div');
         productDiv.classList.add('product');
         productDiv.innerHTML = `
-        <img src="${product.imageUrl}" alt="${product.name}" class="product-image" style="max-width: 100%; border-radius: 5px;">
+        <img src="${product.imageUrl}" alt="${product.name}" class="product-image"
+        style="max-width: 100%; border-radius: 5px;">
             <h2>${product.name}</h2>
             <p>Categoría: ${product.category}</p>
             <p>Precio: ${product.price.toFixed(2)} €</p>
@@ -41,7 +42,7 @@ function displayProducts(products) {
     });
 }
 
-// Configurar los filtros
+    // Configurar los filtros
 function setupFilters(products) {
     const nameFilter = document.getElementById('name-filter');
     const categoryFilter = document.getElementById('category-filter');
@@ -55,7 +56,7 @@ function setupFilters(products) {
     maxPriceFilter.addEventListener('input', () => filterProducts(products));
 }
 
-// Función para filtrar productos
+    // Función para filtrar productos
 function filterProducts(products) {
     const nameFilter = document.getElementById('name-filter').value.toLowerCase();
     const categoryFilter = document.getElementById('category-filter').value.toLowerCase();
@@ -72,3 +73,4 @@ function filterProducts(products) {
 
     displayProducts(filteredProducts); // Mostrar los productos filtrados
 }
+

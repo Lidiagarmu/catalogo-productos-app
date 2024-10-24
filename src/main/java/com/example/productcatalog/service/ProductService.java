@@ -9,14 +9,25 @@ import java.util.List;
 @Service
 public class ProductService {
 
+    // inyectamos con @Autowired nuestro repositorio
     @Autowired
     private ProductRepository productRepository;
 
-   /* public List<Product> searchProductByName(String name) {
-        return productRepository.findByNameContainingIgnoreCase(name);
-    }*/
-
+    // métodos listar todos los productos, guardarlos y eliminarlos
     public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
+
+    public Product saveProduct(Product product) {
+        return productRepository.save(product);
+    }
+
+    public void deleteProduct(Long id) {
+        productRepository.deleteById(id);
+    }
+
 }
+
+
+
+
